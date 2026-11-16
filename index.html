@@ -1,0 +1,1023 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2a0612">
+  <title>For Jana ♡</title>
+  <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Marhey:wght@400;500;600;700&family=Lemonada:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&family=Aref+Ruqaa:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(145deg, #2a0612, #4a0e22, #36091a);
+  color: #f5e4da;
+  font-family: 'Playfair Display', 'Lemonada', serif;
+  overflow-x: hidden;
+}
+
+#app {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.hero,
+.page-section {
+  min-height: 100vh;
+  padding: 35px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero {
+  background:
+    radial-gradient(circle at 15% 20%, #ffffff40 0 3px, transparent 4px),
+    radial-gradient(circle at 85% 75%, #ffffff40 0 3px, transparent 4px);
+}
+
+.sparkle {
+  color: #e3c08d;
+  font-size: 55px;
+  margin-bottom: 12px;
+  animation: sparkle 2.5s infinite ease-in-out;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: #cdaa9c;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(42px, 10vw, 68px);
+  line-height: 1.15;
+  color: #f5e4da;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: #f0d3a0;
+  font-style: italic;
+}
+
+.subtitle {
+  font-family: 'Lemonada', cursive;
+  font-size: 14px;
+  margin-bottom: 30px;
+  color: #cdaa9c;
+}
+
+.date {
+  margin-top: 22px;
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: #cdaa9c;
+}
+
+button {
+  border-radius: 40px;
+  padding: 15px 28px;
+  background: linear-gradient(135deg, #9b2243, #6d1230);
+  color: #f6e3c0;
+  border: 1px solid #e3c08d66;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 8px 22px #00000066;
+  transition: transform .25s, box-shadow .25s;
+}
+
+button:active {
+  transform: scale(.96);
+}
+
+button:hover {
+  box-shadow: 0 10px 28px #00000088;
+}
+
+.page-section {
+  animation: appear .8s ease both;
+}
+
+.section-title {
+  font-family: 'Marhey', cursive;
+  font-size: clamp(27px, 7vw, 39px);
+  color: #e3c08d;
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  font-family: 'Lemonada', cursive;
+  color: #cdaa9c;
+  font-size: 12px;
+  margin-bottom: 25px;
+}
+
+.letter-card {
+  width: min(100%, 650px);
+  padding: clamp(22px, 5vw, 38px);
+  border: 1px solid #ffffff22;
+  border-radius: 25px;
+  background: #ffffff0d;
+  box-shadow: 0 15px 45px #00000055;
+  position: relative;
+}
+
+.letter-heading {
+  font-family: 'Aref Ruqaa', serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #e3c08d;
+  margin-bottom: 18px;
+}
+
+.letter-text {
+  font-family: 'Aref Ruqaa', serif;
+  font-size: clamp(17px, 4.4vw, 21px);
+  line-height: 2.25;
+  color: #f2e1d8;
+  text-align: right;
+  direction: rtl;
+  white-space: pre-line;
+}
+
+.letter-footer {
+  margin-top: 22px;
+  color: #e3c08d;
+  font-size: 23px;
+}
+
+.action-button {
+  margin-top: 25px;
+  font-family: 'Lemonada', cursive;
+}
+
+/* FLOWER GARDEN */
+
+.garden-section {
+  min-height: 100vh;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 100%, #6d1230 0%, transparent 55%),
+    linear-gradient(180deg, #36091a, #2a0612);
+}
+
+.garden-decor {
+  font-size: 25px;
+  letter-spacing: 10px;
+  margin: 5px 0 22px;
+  animation: floatDecor 4s ease-in-out infinite;
+}
+
+.garden-intro {
+  max-width: 420px;
+  font-family: 'Aref Ruqaa', serif;
+  font-size: 16px;
+  line-height: 2;
+  color: #cdaa9c;
+  margin-bottom: 30px;
+}
+
+.envelope-grid {
+  width: min(100%, 720px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  align-items: center;
+}
+
+.envelope {
+  min-width: 0;
+  background: #ffffff0d;
+  border: 1px solid #ffffff22;
+  border-radius: 20px;
+  padding: 18px 10px 16px;
+  color: #e3c08d;
+  box-shadow: 0 12px 28px #00000055;
+  cursor: pointer;
+  transition: transform .3s, box-shadow .3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+}
+
+.envelope:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 17px 32px #00000077;
+}
+
+.envelope-icon {
+  width: 75px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  font-size: 43px;
+  background: #ffffff14;
+  border-radius: 13px;
+}
+
+.envelope-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.envelope-caption {
+  font-family: 'Lemonada', cursive;
+  font-size: 10px;
+  color: #b8978a;
+}
+
+.envelope.opened {
+  background: #ffffff1a;
+  border-color: #e3c08d55;
+}
+
+.envelope.opened .envelope-icon {
+  background: #e3c08d22;
+}
+
+.garden-bottom {
+  margin-top: 35px;
+  font-size: 25px;
+  letter-spacing: 12px;
+}
+
+.garden-progress {
+  font-family: 'Lemonada', cursive;
+  font-size: 11px;
+  color: #b8978a;
+  margin-top: 17px;
+}
+
+/* OPENED LETTER */
+
+.opened-letter {
+  width: min(100%, 620px);
+  padding: clamp(24px, 5vw, 40px);
+  background: #ffffff0f;
+  border: 1px solid #ffffff22;
+  border-radius: 25px;
+  box-shadow: 0 18px 45px #00000066;
+  animation: letterOpen .6s ease both;
+}
+
+.opened-letter .letter-heading {
+  text-align: center;
+}
+
+.opened-letter .letter-text {
+  font-size: clamp(16px, 4.2vw, 20px);
+}
+
+.close-letter {
+  margin-top: 25px;
+}
+
+.final-garden-message {
+  margin-top: 25px;
+  font-family: 'Aref Ruqaa', serif;
+  font-size: 17px;
+  line-height: 2;
+  color: #e3c08d;
+  max-width: 450px;
+}
+
+/* FINAL SCREEN */
+
+.final-section {
+  overflow: hidden;
+}
+
+.final-title {
+  font-family: 'Marhey', cursive;
+  font-size: clamp(32px, 8vw, 48px);
+  color: #e3c08d;
+  margin-bottom: 18px;
+}
+
+.final-message {
+  max-width: 520px;
+  font-family: 'Playfair Display', 'Aref Ruqaa', serif;
+  font-size: 20px;
+  line-height: 2.2;
+  color: #f5e4da;
+  direction: rtl;
+}
+
+.heart {
+  position: fixed;
+  bottom: -30px;
+  color: #e8899f;
+  pointer-events: none;
+  animation: floatUp 5s linear forwards;
+  z-index: 10;
+}
+
+/* OUR STORY */
+
+.ghost-button {
+  margin-top: 18px;
+  background: transparent;
+  border: 1px solid #e3c08d66;
+  color: #e3c08d;
+  box-shadow: none;
+  font-family: 'Lemonada', cursive;
+}
+
+.ghost-button:hover {
+  box-shadow: 0 8px 22px #00000066;
+}
+
+.timeline {
+  position: relative;
+  width: min(100%, 560px);
+  margin: 10px 0 5px;
+  padding: 4px 0;
+  direction: rtl;
+  text-align: right;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  right: 11px;
+  width: 2px;
+  background: linear-gradient(180deg, #e3c08d, #e3c08d22);
+}
+
+.tl-item {
+  position: relative;
+  padding: 0 40px 30px 0;
+  animation: letterOpen .7s ease both;
+}
+
+.tl-item:last-child {
+  padding-bottom: 0;
+}
+
+.tl-dot {
+  position: absolute;
+  top: 4px;
+  right: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #2a0612;
+  border: 2px solid #e3c08d;
+  box-shadow: 0 0 14px #e3c08d55;
+}
+
+.tl-date {
+  font-family: 'Playfair Display', 'Aref Ruqaa', serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #e3c08d;
+  margin-bottom: 6px;
+}
+
+.tl-card {
+  padding: 14px 16px;
+  background: #ffffff0d;
+  border: 1px solid #ffffff22;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px #00000055;
+  font-family: 'Aref Ruqaa', serif;
+  font-size: 16px;
+  line-height: 2.1;
+  color: #f2e1d8;
+}
+
+.listen-link {
+  display: inline-block;
+  margin: 6px 0 4px;
+  padding: 10px 22px;
+  border: 1px solid #e3c08d66;
+  border-radius: 30px;
+  color: #e3c08d;
+  font-family: 'Lemonada', cursive;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+/* CAKE */
+
+.cake-btn {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 0;
+  margin: 8px 0 18px;
+}
+
+.cake-btn:hover {
+  box-shadow: none;
+}
+
+.flame {
+  transform-origin: 110px 62px;
+  animation: flicker 1.4s ease-in-out infinite;
+}
+
+.smoke {
+  opacity: 0;
+}
+
+#cakeSvg.out .flame {
+  display: none;
+}
+
+#cakeSvg.out .smoke {
+  animation: smokeUp 2.2s ease-out forwards;
+}
+
+.wish-prompt {
+  font-family: 'Aref Ruqaa', serif;
+  font-size: 16px;
+  line-height: 2;
+  color: #cdaa9c;
+  margin-bottom: 12px;
+  direction: rtl;
+}
+
+.wish-input {
+  width: min(100%, 420px);
+  padding: 17px 16px;
+  background: #ffffff0d;
+  border: 1px solid #e3c08d55;
+  border-radius: 16px;
+  color: #f5e4da;
+  font-family: 'Aref Ruqaa', serif;
+  font-size: 14px;
+  line-height: 2;
+  direction: rtl;
+  resize: none;
+  outline: none;
+}
+
+.wish-card {
+  width: min(100%, 420px);
+  padding: 18px 20px;
+  background: #ffffff0d;
+  border: 1px solid #ffffff22;
+  border-radius: 20px;
+  box-shadow: 0 12px 28px #00000055;
+  animation: letterOpen .6s ease both;
+}
+
+.wish-title {
+  font-family: 'Aref Ruqaa', serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #e3c08d;
+  margin-bottom: 8px;
+}
+
+.wish-text {
+  font-family: 'Aref Ruqaa', serif;
+  font-size: 17px;
+  line-height: 2.1;
+  color: #f2e1d8;
+  direction: rtl;
+  white-space: pre-line;
+}
+
+.wish-note {
+  max-width: 380px;
+  margin: 16px auto 4px;
+  font-family: 'Aref Ruqaa', serif;
+  font-size: 13px;
+  line-height: 2;
+  color: #b8978a;
+  direction: rtl;
+}
+
+@keyframes flicker {
+  0%, 100% { transform: scale(1) rotate(-1deg); }
+  50% { transform: scale(1.08, 1.12) rotate(2deg); }
+}
+
+@keyframes smokeUp {
+  0% { opacity: 0; transform: translateY(8px); }
+  30% { opacity: .8; }
+  100% { opacity: 0; transform: translateY(-26px); }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% { transform: scale(1) rotate(0); }
+  50% { transform: scale(1.15) rotate(12deg); }
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-110vh) rotate(30deg);
+    opacity: 0;
+  }
+}
+
+@keyframes floatDecor {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+@keyframes letterOpen {
+  from {
+    opacity: 0;
+    transform: scale(.92) translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .envelope-grid {
+    gap: 8px;
+  }
+
+  .envelope {
+    padding: 14px 5px;
+    border-radius: 15px;
+  }
+
+  .envelope-icon {
+    width: 58px;
+    height: 50px;
+    font-size: 34px;
+  }
+
+  .envelope-title {
+    font-size: 11px;
+  }
+
+  .envelope-caption {
+    font-size: 9px;
+  }
+
+  .letter-card {
+    padding: 22px 17px;
+  }
+
+  .letter-text {
+    line-height: 2.15;
+  }
+
+  .garden-intro {
+    margin-bottom: 22px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+  <main id="app">
+    <section class="hero">
+      <div class="sparkle">✦</div>
+      <p class="eyebrow">A LITTLE SOMETHING FOR YOU</p>
+      <h1>Happy Birthday,<br><span>Jana</span></h1>
+      <p class="subtitle">A little world made just for you.</p>
+      <button id="openBtn">Open your surprise ♡</button>
+      <p class="date">November 25</p>
+    </section>
+  </main>
+
+  <script>
+
+// دوسة بسيطة وناعمة عند الضغط على أي زرار
+let audioCtx = null;
+let noiseBuffer = null;
+
+function playTap() {
+  try {
+    const AC = window.AudioContext || window.webkitAudioContext;
+    if (!AC) return;
+    if (!audioCtx) audioCtx = new AC();
+    if (audioCtx.state === "suspended") audioCtx.resume();
+
+    const t = audioCtx.currentTime;
+
+    // نقرة قصيرة جدًا من ضوضاء مفلترة
+    if (!noiseBuffer) {
+      const len = Math.floor(audioCtx.sampleRate * 0.05);
+      noiseBuffer = audioCtx.createBuffer(1, len, audioCtx.sampleRate);
+      const data = noiseBuffer.getChannelData(0);
+      for (let i = 0; i < len; i++) data[i] = Math.random() * 2 - 1;
+    }
+    const src = audioCtx.createBufferSource();
+    src.buffer = noiseBuffer;
+
+    const filter = audioCtx.createBiquadFilter();
+    filter.type = "lowpass";
+    filter.frequency.setValueAtTime(1400, t);
+
+    const g = audioCtx.createGain();
+    g.gain.setValueAtTime(0.0001, t);
+    g.gain.linearRampToValueAtTime(0.07, t + 0.004);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + 0.04);
+
+    src.connect(filter);
+    filter.connect(g);
+    g.connect(audioCtx.destination);
+    src.start(t);
+    src.stop(t + 0.05);
+
+    // "طَب" خفيفة ووطية تدي إحساس الضغطة
+    const osc = audioCtx.createOscillator();
+    const og = audioCtx.createGain();
+    osc.type = "sine";
+    osc.frequency.setValueAtTime(180, t);
+    osc.frequency.exponentialRampToValueAtTime(90, t + 0.06);
+    og.gain.setValueAtTime(0.0001, t);
+    og.gain.linearRampToValueAtTime(0.06, t + 0.004);
+    og.gain.exponentialRampToValueAtTime(0.0001, t + 0.07);
+    osc.connect(og);
+    og.connect(audioCtx.destination);
+    osc.start(t);
+    osc.stop(t + 0.08);
+  } catch (e) {}
+}
+
+document.addEventListener("click", (e) => {
+  if (e.target.closest("button")) playTap();
+});
+
+const app = document.getElementById("app");
+
+const mainMessage = `في حاجات كتير ممكن الواحد يعدّي عليها في يومه وينساها، بس في أشخاص بيكون ليهم طريقة غريبة في إنهم يفضلوا في باله حتى من غير ما يعملوا حاجة. وإنتِ من الناس دي بالنسبالي. بحب تفاصيلك اللي يمكن إنتِ نفسك مش واخدة بالك منها، وطريقتك في الكلام، وردود فعلك، وحتى الحاجات الصغيرة اللي بتحكيهالي. مش لازم كل يوم يكون فيه كلام كبير أو لحظات مميزة، ساعات مجرد كلام عادي معاكي بيكون كفاية إنه يخلّي يومي أحسن. وكل اللي عايز أقوله إن وجودك فارق معايا، وإنك مش شخص عادي بالنسبالي.`;
+
+const letters = [
+  {
+    title: "A Little Wish",
+    icon: "🌷",
+    caption: "A wish for you",
+    heading: "أمنية صغيرة ليكي ♡",
+    text: `عارف إن عيد ميلادك مش هيغيّر كل حاجة فجأة، وإن بعده هترجعي لنفس يومك العادي، نفس الحاجات اللي وراكي ونفس التفاصيل الصغيرة. بس بجد أتمنى السنة دي تكون أحنّ عليكي، تلاقي فيها حاجات كنتِ مستنياها تحصل، وتوصلي لحاجات تعبتي عشانها. أتمنى تضحكي كتير، ومتضطريش تكدّري نفسك عشان حاجات متستاهلش، وكل مرة تحسي إن الدنيا مش ماشية زي ما إنتِ عايزة تلاقي حاجة حلوة تعوّضك. تستاهلي سنة حلوة يا جنى.`
+  },
+  {
+    title: "Something I Never Said",
+    icon: "💌",
+    caption: "A little confession",
+    heading: "حاجة مقلتهالكش ♡",
+    text: `في تفاصيل صغيرة فيكي أنا فعلًا باخد بالي منها. زي لما تحكيلي عن حاجة حصلت في يومك وتدخلي في تفاصيلها، أو لما تردّي بطريقة تضحكني من غير ما تكوني قاصدة، أو لما نفتح موضوع عادي جدًا ونفضل نتكلم فيه. الحاجات دي يمكن بالنسبالك مواقف عادية وبتعدّي، بس أنا ببقى مبسوط بيها. ومش بقولك الكلام ده عشان تستني مني رد فعل معين، أنا بس حبيت تعرفي إن التفاصيل اللي ممكن متاخديش بالك منها ليها قيمة عندي.`
+  },
+  {
+    title: "One More Surprise",
+    icon: "🦋",
+    caption: "The last little note",
+    heading: "مفاجأة أخيرة ♡",
+    text: `عارفة إيه أكتر حاجة حبيتها في فكرة الموقع ده؟ إني قعدت أفكر في كل تفصيلة فيه، من الألوان للصور للرسائل، وأفضل أغيّر وأظبط لحد ما أحس إنه بقى شبه الحاجة اللي كنت عايز أعملهالك. يمكن لما تفتحيه هتشوفيه مجرد موقع صغير فيه شوية كلام وورد، بس وراه وقت وتفكير، وكل تفصيلة فيه اتحطت عشان تبقى ليكي إنتِ. ويارب لما تخلصي جولتك الصغيرة هنا تكوني ابتسمتي ولو مرة واحدة. عيد ميلاد سعيد يا جنى. ♡`
+  }
+];
+
+const openedLetters = new Set();
+
+// الرسالة الأساسية
+function showLetter() {
+  app.innerHTML = `
+    <section class="page-section">
+      <h2 class="section-title">A Letter For Jana ♡</h2>
+      <p class="section-subtitle">A LITTLE NOTE FROM ME</p>
+
+      <div class="letter-card">
+        <h3 class="letter-heading">عارفة يا جنى،</h3>
+        <p class="letter-text" id="typedMessage"></p>
+        <div class="letter-footer">♡ ✦ ♡</div>
+      </div>
+
+      <button class="action-button" id="gardenBtn">
+        Enter the garden ♡
+      </button>
+    </section>
+  `;
+
+  const output = document.getElementById("typedMessage");
+  const chars = Array.from(mainMessage);
+  let index = 0;
+
+  const typing = setInterval(() => {
+    if (!output.isConnected) {
+      clearInterval(typing);
+      return;
+    }
+
+    output.textContent += chars[index];
+    index++;
+
+    if (index >= chars.length) {
+      clearInterval(typing);
+    }
+  }, 12);
+
+  document.getElementById("gardenBtn").addEventListener("click", showGarden);
+}
+
+// حديقة الأظرف
+function showGarden() {
+  app.innerHTML = `
+    <section class="page-section garden-section">
+      <div class="garden-decor">🌷 🦋 🌸</div>
+
+      <h2 class="section-title">Jana's Little Garden</h2>
+
+      <p class="garden-intro">
+        زرعتلك هنا شوية كلام صغير...
+        افتحي كل ظرف واكتشفي اللي جواه ♡
+      </p>
+
+      <div class="envelope-grid">
+        ${letters.map((letter, index) => `
+          <button
+            class="envelope ${openedLetters.has(index) ? "opened" : ""}"
+            data-letter="${index}"
+          >
+            <span class="envelope-icon">
+              ${openedLetters.has(index) ? "💗" : "✉️"}
+            </span>
+
+            <span class="envelope-title">
+              ${letter.title}
+            </span>
+
+            <span class="envelope-caption">
+              ${openedLetters.has(index) ? "Opened ♡" : letter.caption}
+            </span>
+          </button>
+        `).join("")}
+      </div>
+
+      <div class="garden-bottom">🌼 🌷 🌼</div>
+
+      <p class="garden-progress">
+        ${openedLetters.size} / 3 letters opened
+      </p>
+
+      ${
+        openedLetters.size === 3
+          ? `<p class="final-garden-message">
+               فتحتي كل الأظرف... بس لسه في آخر حاجة ليكي ♡
+             </p>
+             <button class="action-button" id="storyBtn">
+               Our Story ✦
+             </button>`
+          : ""
+      }
+    </section>
+  `;
+
+  document.querySelectorAll("[data-letter]").forEach(button => {
+    button.addEventListener("click", () => {
+      openLetter(Number(button.dataset.letter));
+    });
+  });
+
+  const storyBtn = document.getElementById("storyBtn");
+
+  if (storyBtn) {
+    storyBtn.addEventListener("click", showStory);
+  }
+}
+
+// قصتنا
+const story = [
+  {
+    date: "مارس",
+    text: "اتعرفنا ♡<br>ومعرفش إيه اللي شدّني ليكي من الأول، ولا إزاي حصل. بس اللي أعرفه إن إحساسي وقتها كان صح."
+  },
+  {
+    date: "18 يونيو",
+    text: "حكيتلك اللي جوايا، وكنتي صريحة معايا. وأنا احترمت ده جدًا."
+  },
+  {
+    date: "الصيف",
+    text: "يمكن كنا بعاد شوية، بس إنتِ كنتي في بالي على طول."
+  },
+  {
+    date: "13 نوفمبر",
+    text: "قلتلك اللي جوايا، وإدتيني فرصة. وده من أحلى الحاجات اللي حصلتلي."
+  },
+  {
+    date: "25 نوفمبر",
+    text: "عيد ميلادك، وده الويبسايت اللي طلّعت فيه كل اللي جوايا ♡"
+  }
+];
+
+function showStory() {
+  app.innerHTML = `
+    <section class="page-section">
+      <div class="sparkle">✦</div>
+
+      <h2 class="section-title">Our Story</h2>
+      <p class="section-subtitle">A LITTLE TIMELINE OF US</p>
+
+      <div class="timeline">
+        ${story.map((item, i) => `
+          <div class="tl-item" style="animation-delay:${i * 0.25}s">
+            <div class="tl-dot"></div>
+            <div class="tl-date">${item.date}</div>
+            <div class="tl-card">${item.text}</div>
+          </div>
+        `).join("")}
+      </div>
+
+      <button class="action-button" id="cakeBtn">
+        Go to the birthday cake 🎂
+      </button>
+
+      <button class="ghost-button" id="backToGardenBtn">
+        Back to the garden ♡
+      </button>
+    </section>
+  `;
+
+  document.getElementById("cakeBtn").addEventListener("click", showCake);
+  document.getElementById("backToGardenBtn").addEventListener("click", showGarden);
+}
+
+// الكيكة والأمنية
+const WISH_PHONE = ""; // رقم الواتساب بصيغة دولية بدون + (مثال: 201012345678)
+
+function showCake() {
+  app.innerHTML = `
+    <section class="page-section cake-section">
+      <h2 class="section-title">Happy Birthday ♡</h2>
+      <p class="section-subtitle" id="cakeHint">TAP THE CANDLE TO BLOW IT OUT</p>
+
+      <button class="cake-btn" id="candleBtn" aria-label="candle">
+        <svg viewBox="0 0 220 250" width="230" id="cakeSvg" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="110" cy="228" rx="95" ry="12" fill="#00000055"/>
+          <rect x="30" y="150" width="160" height="70" rx="14" fill="#6d1230"/>
+          <path d="M30 164 q10 18 20 0 q10 18 20 0 q10 18 20 0 q10 18 20 0 q10 18 20 0 q10 18 20 0 q10 18 20 0 q10 18 20 0 L190 150 L30 150 Z" fill="#e3c08d"/>
+          <rect x="55" y="105" width="110" height="52" rx="12" fill="#9b2243"/>
+          <path d="M55 118 q9 14 18 0 q9 14 18 0 q9 14 18 0 q9 14 18 0 q9 14 18 0 q9 14 18 0 L165 105 L55 105 Z" fill="#f5e4da"/>
+          <circle cx="75" cy="185" r="5" fill="#e3c08d"/>
+          <circle cx="110" cy="190" r="5" fill="#e3c08d"/>
+          <circle cx="145" cy="185" r="5" fill="#e3c08d"/>
+          <rect x="104" y="62" width="12" height="46" rx="4" fill="#f5e4da"/>
+          <path d="M104 74 l12 6 M104 88 l12 6" stroke="#e3c08d" stroke-width="3"/>
+          <g class="flame">
+            <ellipse cx="110" cy="46" rx="9" ry="16" fill="#e3c08d"/>
+            <ellipse cx="110" cy="50" rx="4.5" ry="8" fill="#fff4d6"/>
+          </g>
+          <g class="smoke">
+            <path d="M110 58 q-8 -14 0 -26 q8 -12 0 -26" stroke="#f5e4da" stroke-width="3" fill="none" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </button>
+
+      <div id="wishArea"></div>
+    </section>
+  `;
+
+  document.getElementById("candleBtn").addEventListener("click", blowCandle, { once: true });
+}
+
+function blowCandle() {
+  document.getElementById("cakeSvg").classList.add("out");
+  document.getElementById("cakeHint").textContent = "NOW MAKE A WISH ♡";
+
+  document.getElementById("wishArea").innerHTML = `
+    <p class="wish-prompt">اتمني أمنية في سرك... وبعدين اكتبيها لو حابة ♡</p>
+    <textarea id="wishInput" class="wish-input" rows="3" placeholder="أمنيتي..."></textarea>
+    <button class="action-button" id="wishBtn">Make my wish ✦</button>
+  `;
+
+  document.getElementById("wishBtn").addEventListener("click", makeWish);
+}
+
+function makeWish() {
+  const wish = document.getElementById("wishInput").value.trim();
+  const area = document.getElementById("wishArea");
+
+  const sendBtn = (wish && WISH_PHONE)
+    ? `<p class="wish-note">لو حابة أعرف أمنيتك، دوسي هنا وهتتبعت على واتساب. وإنتِ اللي بتدوسي إرسال ♡</p>
+       <a class="listen-link" target="_blank" rel="noopener"
+          href="https://wa.me/${WISH_PHONE}?text=${encodeURIComponent("أمنيتي: " + wish)}">
+         ابعتي أمنيتي ♡
+       </a>`
+    : "";
+
+  area.innerHTML = `
+    <div class="wish-card">
+      <div class="sparkle">✦</div>
+      <p class="wish-title">${wish ? "أمنيتك:" : "أمنيتك في قلبك ♡"}</p>
+      ${wish ? `<p class="wish-text" id="wishText"></p>` : ""}
+    </div>
+    ${sendBtn}
+    <button class="action-button" id="finishBtn">One Last Thing ♡</button>
+  `;
+
+  if (wish) document.getElementById("wishText").textContent = wish;
+  document.getElementById("finishBtn").addEventListener("click", showFinal);
+}
+
+// فتح ظرف
+function openLetter(index) {
+  openedLetters.add(index);
+
+  const letter = letters[index];
+
+  app.innerHTML = `
+    <section class="page-section">
+      <div class="opened-letter">
+        <div class="sparkle">${letter.icon}</div>
+
+        <h2 class="section-title">${letter.title}</h2>
+
+        <h3 class="letter-heading">${letter.heading}</h3>
+
+        <p class="letter-text">${letter.text}</p>
+
+        <div class="letter-footer">♡ ✦ ♡</div>
+      </div>
+
+      <button class="close-letter" id="backBtn">
+        Back to the garden ♡
+      </button>
+    </section>
+  `;
+
+  document.getElementById("backBtn").addEventListener("click", showGarden);
+}
+
+// النهاية
+function showFinal() {
+  app.innerHTML = `
+    <section class="page-section final-section">
+      <div class="sparkle">✦</div>
+
+      <h2 class="final-title">Happy Birthday, Jana ♡</h2>
+
+      <p class="final-message">
+        أتمنى يومك يكون جميل شبهك،
+        وسنتك الجديدة تكون مليانة حاجات حلوة
+        وضحك ونجاحات ولحظات تفضلي فاكرها.
+        <br><br>
+        You deserve all the beautiful things. ♡
+      </p>
+
+      <div class="letter-footer">25 November ♡</div>
+    </section>
+  `;
+
+  startHearts();
+}
+
+// قلوب متحركة
+function startHearts() {
+  const heartInterval = setInterval(() => {
+    if (!document.querySelector(".final-section")) {
+      clearInterval(heartInterval);
+      return;
+    }
+
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.textContent = ["♡", "♥", "✦"][Math.floor(Math.random() * 3)];
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (15 + Math.random() * 20) + "px";
+    heart.style.animationDuration = (4 + Math.random() * 3) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 7000);
+  }, 450);
+}
+
+// زر البداية الأصلي
+document.getElementById("openBtn").addEventListener("click", showLetter);
+
+</script>
+</body>
+</html>
